@@ -6,13 +6,13 @@ var app = require('http').createServer(handler),
   connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: 'root',
+    password: '',
     database: 'nodejs',
     port: 3306
   }),
   POLLING_INTERVAL = 3000,
   pollingTimer;
-
+console.log("here");
 // If there is an error connecting to the database
 connection.connect(function(err) {
   // connected! (unless `err` is set)
@@ -61,6 +61,7 @@ var pollingLoop = function() {
       users.push(user);
     })
     .on('end', function() {
+
       // loop on itself only if there are sockets still connected
       if (connectionsArray.length) {
         pollingTimer = setTimeout(pollingLoop, POLLING_INTERVAL);

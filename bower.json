@@ -1,0 +1,11 @@
+{
+  "name": "GetIt",
+  "version": "0.0.1",
+  "authors": [
+    "Muragijimana Richard <beastar457@gmail.com>"
+  ],
+  "description": "App That sell Everything",
+  "main": "index.html",
+  "license": "MIT",
+  "homepage": "index.html"
+}
